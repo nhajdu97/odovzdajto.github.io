@@ -1,1 +1,54 @@
+.nav-link {
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    
+}
+
+.nav-link:hover {
+    transform: scale(1.1);
+}
+
+.kontakt {
+    transition: all 0.3s ease-in-out;
+}
+
+.kontakt:hover {
+    transform: scale(1.1);
+}
+
+#scrolltop {
+    position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        display: none;
+        color: #ff8300;
+}
+
+#scrolltop:hover {
+    cursor: pointer;
+}
+
+.navbar {
+    background-color: black;
+}
+
+.bg-custom {
+    background-color: #003366;
+}
+
+.btn-orange {
+    background-color: #ff8300;
+    color: #fff;
+    border-color: #ff8300;
+}
+
+.btn-orange:hover {
+    background-color: #e65c00;
+    border-color: #e65c00;
+    color: #fff;
+}
 
