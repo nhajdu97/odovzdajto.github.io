@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrácia | OdovzdajTo</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- CSS -->
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <!-- Favicon -->
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navigacia-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">OdovzdajTo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav position-static">
+                    <li class="nav-item">
+                        <a class="nav-link nav-font" href="domov.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-house-door-fill"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                            </svg>&nbsp;Domov</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-font active" href="registracia.html"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                <path fill-rule="evenodd"
+                                    d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+                            </svg>&nbsp;Registrácia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-font" href="prihlasenie.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-door-open-fill"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z" />
+                            </svg>&nbsp;Prihlásenie</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-font dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-translate" viewBox="0 0 16 16">
+                                <path
+                                    d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z" />
+                                <path
+                                    d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z" />
+                            </svg>&nbsp;Jazyk
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <button class="dropdown-item" id="sk" onclick="switchLanguage('sk')">SK</button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" id="en" onclick="switchLanguage('en')">EN</button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigacia-->
+    <!-- Header -->
+    <header class="bg-custom bg-gradient text-white text-center py-5">
+        <div class="container px-4">
+            <h1 class="fw-bolder nadpis">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                        d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+                </svg>&nbsp;Registrácia
+            </h1>
+        </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Content -->
+    <!-- Formulár -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form class="p-4 border rounded needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="name" class="form-label fw-bold text">Meno a priezvisko</label>
+                        <input type="text" class="form-control" id="name" name="name" required />
+                        <div class="invalid-feedback text">
+                            Prosím vyplňte meno a priezvisko
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label fw-bold text">Školský e-mail</label>
+                        <input type="email" class="form-control" id="email" name="email" required />
+                        <div class="invalid-feedback text">
+                            Prosím vyplňte školský email
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="faculty" class="form-label fw-bold text">Fakulta</label>
+                        <input type="text" class="form-control" id="faculty" name="faculty" required />
+                        <div class="invalid-feedback text">Prosím vyplňte fakultu</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="study-field" class="form-label fw-bold text">Študijný odbor</label>
+                        <input type="text" class="form-control" id="study-field" name="study-field" required />
+                        <div class="invalid-feedback text">
+                            Prosím vyplňte študijný odbor
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="year" class="form-label fw-bold text">Ročník</label>
+                        <select class="form-select" id="year" name="year" required>
+                            <div class="invalid-feedback text">
+                                Prosím vyberte si ročník
+                            </div>
+                            <option value="">Vyberte ročník</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-orange text">
+                            Zaregistrovať sa
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulár -->
+    <!-- Content -->
+
+    <!-- Footer-->
+    <footer class="bg-dark navbar-dark py-3 mt-auto">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
+                    <img src="img/kemt_logo.png" alt="KEMT logo" height="30" />
+                </div>
+                <div class="col-12 col-md-6 text-center text-light mb-3 mb-md-0 nav-font">
+                    &copy; 2023 Copyright
+                </div>
+                <div class="col-12 col-md-3 text-center kontakt">
+                    <a href="mailto:johndoe@student.tuke.sk" class="nav-link nav-font text-light"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-person-workspace" viewBox="0 0 16 16">
+                            <path
+                                d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                            <path
+                                d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z" />
+                        </svg>&nbsp;Kontakt (Admin)</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer-->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/scrollToTop.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <a onclick="topFunction()" class="" id="scrolltop" href="#" style="display: none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+            class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+            <path
+                d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" />
+        </svg>
+    </a>
+</body>
+
+</html>
