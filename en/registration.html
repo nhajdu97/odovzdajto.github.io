@@ -5,14 +5,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | OdovzdajTo</title>
+    <title>Registration | OdovzdajTo</title>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/fonts.css" />
-    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="stylesheet" href="../css/animate.min.css">
     <!-- CSS -->
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
@@ -34,9 +34,16 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav position-static">
                     <li class="nav-item">
-                        <a class="nav-link nav-font" href="registration.html"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill"
-                                viewBox="0 0 16 16">
+                        <a class="nav-link nav-font" href="home.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                            </svg>&nbsp;Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-font active" href="registration.html"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                                 <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                                 <path fill-rule="evenodd"
                                     d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
@@ -63,14 +70,12 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <button class="dropdown-item translate" id="sk" onclick="switchLanguage('sk')">
-                                    SK
-                                </button>
+                                <button class="dropdown-item translate" id="sk"
+                                    onclick="switchLanguage('sk')">SK</button>
                             </li>
                             <li>
-                                <button class="dropdown-item translate" id="en" onclick="switchLanguage('en')">
-                                    EN
-                                </button>
+                                <button class="dropdown-item translate" id="en"
+                                    onclick="switchLanguage('en')">EN</button>
                             </li>
                         </ul>
                     </li>
@@ -79,39 +84,78 @@
         </div>
     </nav>
     <!-- Navigacia-->
+    <!-- Header -->
+    <header class="bg-custom bg-gradient text-white text-center py-5">
+        <div class="container px-4">
+            <h1 class="fw-bolder nadpis">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                        d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+                </svg>&nbsp;Registration
+            </h1>
+        </div>
+    </header>
+    <!-- Header -->
 
     <!-- Content -->
+    <!-- Formulár -->
     <div class="container my-5">
-        <div class="bg-body-tertiary p-5 rounded">
-            <div class="col-sm-8 py-5 mx-auto">
-                <h1 class="display-5 nadpis fw-normal animate__animated animate__lightSpeedInLeft">
-                    Announcements
-                </h1>
-                <p class="fs-5">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit,
-                    tempora provident eveniet possimus illum nihil rerum cum voluptates
-                    quam, reiciendis non exercitationem autem. Dicta possimus, eos
-                    nesciunt in ipsa modi.
-                    <a href="/docs/5.3/examples/navbar-static/">top</a> and
-                    <a href="/docs/5.3/examples/navbar-fixed/">fixed top</a> examples.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Accusantium, provident porro, vitae rem quidem consectetur
-                    repellendus est dolores ullam sunt earum nobis sit. Unde earum,
-                    totam facere praesentium recusandae consequuntur. Recusandae
-                    incidunt beatae at nostrum quis, aut soluta consectetur, blanditiis
-                    quod nesciunt, optio sapiente. Ipsum temporibus iure, quas beatae
-                    quisquam incidunt natus nesciunt voluptas accusamus? Corrupti
-                    voluptatibus odio impedit nesciunt.
-                </p>
-                <p>
-                    <a class="btn btn-primary" href="/docs/5.3/components/navbar/#offcanvas" role="button">Learn more
-                        about offcanvas navbars &raquo;</a>
-                </p>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form class="p-4 border rounded needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="name" class="form-label fw-bold text">Name and surname</label>
+                        <input type="text" class="form-control" id="name" name="name" required />
+                        <div class="invalid-feedback text">
+                            Please fill in your name and surname
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label fw-bold text">University email</label>
+                        <input type="email" class="form-control" id="email" name="email" required />
+                        <div class="invalid-feedback text">
+                            Please fill in the university email
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="faculty" class="form-label fw-bold text">Faculty</label>
+                        <input type="text" class="form-control" id="faculty" name="faculty" required />
+                        <div class="invalid-feedback text">Please fill in the faculty</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="study-field" class="form-label fw-bold text">Field of study</label>
+                        <input type="text" class="form-control" id="study-field" name="study-field" required />
+                        <div class="invalid-feedback text">
+                            Please fill in the field of study
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="year" class="form-label fw-bold text">Year</label>
+                        <select class="form-select" id="year" name="year" required>
+                            <div class="invalid-feedback text">
+                                Please select a year of study
+                            </div>
+                            <option value="">Select the year of study</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-orange text">
+                            Sign In
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+
+    <!-- Formulár -->
     <!-- Content -->
 
     <!-- Footer-->
@@ -125,7 +169,7 @@
                     &copy; 2023 Copyright
                 </div>
                 <div class="col-12 col-md-3 text-center kontakt">
-                    <a href="mailto:johndoe@student.tuke.sk" class="nav-link text-light nav-font"><svg
+                    <a href="mailto:johndoe@student.tuke.sk" class="nav-link nav-font text-light"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-person-workspace" viewBox="0 0 16 16">
                             <path
@@ -140,10 +184,11 @@
     <!-- Footer-->
 
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/validation.js"></script>
     <script src="../js/smooth-scroll.min.js"></script>
     <script src="../js/scrollToTop.js"></script>
-    <script src="../js/language.js"></script>
     <script src="../js/jquery.min.js"></script>
+    <script src="../js/language.js"></script>
     <a onclick="topFunction()" class="" id="scrolltop" href="#" style="display: none">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
             class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
