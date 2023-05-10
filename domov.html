@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prihlásenie | OdovzdajTo</title>
+    <title>Domov | OdovzdajTo</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/bootstrap-icons.min.css" />
@@ -33,14 +33,7 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav position-static">
-                    <li class="nav-item">
-                        <a class="nav-link nav-font" href="domov.html"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-house-door-fill"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
-                            </svg>&nbsp;Domov</a>
-                    </li>
+                    <!-- Registracia -->
                     <li class="nav-item">
                         <a class="nav-link nav-font" href="registracia.html"><svg xmlns="http://www.w3.org/2000/svg"
                                 width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill"
@@ -50,16 +43,20 @@
                                     d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
                             </svg>&nbsp;Registrácia</a>
                     </li>
+                    <!-- Registracia -->
+                    <!-- Prihlasenie -->
                     <li class="nav-item">
-                        <a class="nav-link nav-font active" href="prihlasenie.html"><svg
+                        <a data-translate="navbar-log" class="nav-link nav-font" href="prihlasenie.html"><svg
                                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-door-open-fill" viewBox="0 0 16 16">
                                 <path
                                     d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z" />
                             </svg>&nbsp;Prihlásenie</a>
                     </li>
+                    <!-- Prihlasenie -->
+                    <!-- Jazyk -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link nav-font dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link nav-font dropdown-toggle" href="" id="langSelector" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-translate" viewBox="0 0 16 16">
@@ -69,7 +66,7 @@
                                     d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z" />
                             </svg>&nbsp;Jazyk
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="langSelector">
                             <li>
                                 <button class="dropdown-item" id="sk" onclick="switchLanguage('sk')">SK</button>
                             </li>
@@ -78,10 +75,11 @@
                             </li>
                         </ul>
                     </li>
+                    <!-- Jazyk -->
                     <!-- Rezim -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link nav-font dropdown-toggle" id="darkMode" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" href="">
+                        <a class="nav-link nav-font dropdown-toggle" id="darkMode" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" href="">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
                                 <path
@@ -90,15 +88,17 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="darkMode">
                             <li>
-                                <button class="dropdown-item" onclick="setMode('light')"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+                                <button class="dropdown-item" onclick="setMode('light')"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
                                         <path
                                             d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
                                     </svg>&nbsp;Svetlý</button>
                             </li>
                             <li>
-                                <button class="dropdown-item" onclick="setMode('dark')"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+                                <button class="dropdown-item" onclick="setMode('dark')"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-moon-fill" viewBox="0 0 16 16">
                                         <path
                                             d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
                                     </svg>&nbsp;Tmavý</button>
@@ -106,58 +106,97 @@
                         </ul>
                     </li>
                     <!-- Rezim -->
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Navigacia-->
-
-    <!-- Header -->
-    <header class="bg-custom bg-gradient text-white text-center py-5">
-        <div class="container px-4">
-            <h1 class="fw-bolder nadpis animate__animated animate__zoomInDown">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                    class="bi bi-door-open-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z" />
-                </svg>&nbsp;Prihlásenie
-            </h1>
-        </div>
-    </header>
-    <!-- Header -->
-
-    <!-- Content -->
-    <main>
-    <!-- Formulár -->
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <form class="p-4 border rounded">
-                    <div class="mb-3">
-                        <label for="inputEmail" class="form-label fw-bold text animate__animated animate__lightSpeedInLeft">Školský e-mail</label>
-                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
-                            required />
-                        <div id="emailHelp" class="text">
-                            Vaša emailová adresa musí byť platná.
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="inputPassword" class="form-label fw-bold text animate__animated animate__lightSpeedInRight">Heslo</label>
-                        <input type="password" class="form-control" id="inputPassword" required />
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-orange btn-lg text animate__animated animate__backInUp">
-                            Prihlásiť sa
-                        </button>
-                    </div>
-                    <div class="text-center mt-3 text animate__animated animate__backInUp">
-                        <a href="heslo.html">Zabudli ste heslo?</a>
-                    </div>
-                </form>
+    <section class="hero bg-custom bg-gradient py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="fw-bolder text-white nadpis animate__animated animate__zoomInDown"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-info-square-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                        </svg>&nbsp;Novinky</h1>
+                    <p class="lead text-white">Na tejto stránke sa budú nachádzať novinky ohľadom zadaní</p>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Formulár -->
+    </section>
+    <main>
+        <!-- Content -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <!-- Oznam -->
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h2 class="card-title nadpis fw-bolder">Oznam 1</h2>
+                                <p class="card-text text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                                    gravida eget
+                                    odio sed mollis. Morbi vitae velit lacus. Sed id eros et ante vehicula efficitur vel
+                                    eget
+                                    justo. Donec interdum, tortor eget tristique blandit, erat nibh tincidunt urna, id
+                                    pharetra
+                                    velit est ut est.</p>
+                            </div>
+                        </div>
+                        <!-- Oznam -->
+
+                        <!-- Oznam -->
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h2 class="card-title nadpis fw-bolder">Oznam 2</h2>
+                                <p class="card-text text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                                    gravida eget
+                                    odio sed mollis. Morbi vitae velit lacus. Sed id eros et ante vehicula efficitur vel
+                                    eget
+                                    justo. Donec interdum, tortor eget tristique blandit, erat nibh tincidunt urna, id
+                                    pharetra
+                                    velit est ut est.</p>
+                            </div>
+                        </div>
+                        <!-- Oznam -->
+
+                        <!-- Oznam -->
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h2 class="card-title nadpis fw-bolder">Oznam 3</h2>
+                                <p class="card-text text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                                    gravida eget
+                                    odio sed mollis. Morbi vitae velit lacus. Sed id eros et ante vehicula efficitur vel
+                                    eget
+                                    justo. Donec interdum, tortor eget tristique blandit, erat nibh tincidunt urna, id
+                                    pharetra
+                                    velit est ut est.</p>
+                            </div>
+                        </div>
+                        <!-- Oznam -->
+
+                        <!-- Oznam -->
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h2 class="card-title nadpis fw-bolder">Oznam 4</h2>
+                                <p class="card-text text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                                    gravida eget
+                                    odio sed mollis. Morbi vitae velit lacus. Sed id eros et ante vehicula efficitur vel
+                                    eget
+                                    justo. Donec interdum, tortor eget tristique blandit, erat nibh tincidunt urna, id
+                                    pharetra
+                                    velit est ut est.</p>
+                            </div>
+                        </div>
+                        <!-- Oznam -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- Content -->
 
@@ -172,7 +211,7 @@
                     &copy; 2023 Copyright
                 </div>
                 <div class="col-12 col-md-3 text-center kontakt">
-                    <a href="mailto:johndoe@student.tuke.sk" class="nav-link nav-font text-light"><svg
+                    <a href="mailto:johndoe@student.tuke.sk" class="nav-link text-light nav-font"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-person-workspace" viewBox="0 0 16 16">
                             <path
@@ -187,7 +226,6 @@
     <!-- Footer-->
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/validation.js"></script>
     <script src="js/smooth-scroll.min.js"></script>
     <script src="js/scrollToTop.js"></script>
     <script src="js/language.js"></script>
