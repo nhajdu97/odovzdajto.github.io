@@ -24,9 +24,9 @@
 
 <body class="d-flex flex-column min-vh-100">
     <!-- Navigacia-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
         <div class="container">
-            <a class="navbar-brand logo" href="#">OdovzdajTo</a>
+            <a class="navbar-brand logo animate__animated animate__fadeInTopLeft" href="domov.html">OdovzdajTo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -78,6 +78,34 @@
                             </li>
                         </ul>
                     </li>
+                    <!-- Rezim -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-font dropdown-toggle" id="darkMode" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="darkMode">
+                            <li>
+                                <button class="dropdown-item" onclick="setMode('light')"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                                    </svg>&nbsp;Svetlý</button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" onclick="setMode('dark')"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+                                    </svg>&nbsp;Tmavý</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Rezim -->
                 </ul>
             </div>
         </div>
@@ -86,7 +114,7 @@
     <!-- Header -->
     <header class="bg-custom bg-gradient text-white text-center py-5">
         <div class="container px-4">
-            <h1 class="fw-bolder nadpis">
+            <h1 class="fw-bolder nadpis animate__animated animate__zoomInDown">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                     class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                     <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
@@ -99,44 +127,45 @@
     <!-- Header -->
 
     <!-- Content -->
+    <main>
     <!-- Formulár -->
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <form class="p-4 border rounded needs-validation" novalidate>
                     <div class="mb-3">
-                        <label for="name" class="form-label fw-bold text">Meno a priezvisko</label>
+                        <label for="name" class="form-label fw-bold text animate__animated animate__lightSpeedInLeft">Meno a priezvisko</label>
                         <input type="text" class="form-control" id="name" name="name" required />
                         <div class="invalid-feedback text">
                             Prosím vyplňte meno a priezvisko
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label fw-bold text">Školský e-mail</label>
+                        <label for="email" class="form-label fw-bold text animate__animated animate__lightSpeedInRight">Školský e-mail</label>
                         <input type="email" class="form-control" id="email" name="email" required />
                         <div class="invalid-feedback text">
                             Prosím vyplňte školský email
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="faculty" class="form-label fw-bold text">Fakulta</label>
+                        <label for="faculty" class="form-label fw-bold text animate__animated animate__lightSpeedInLeft">Fakulta</label>
                         <input type="text" class="form-control" id="faculty" name="faculty" required />
                         <div class="invalid-feedback text">Prosím vyplňte fakultu</div>
                     </div>
                     <div class="mb-3">
-                        <label for="study-field" class="form-label fw-bold text">Študijný odbor</label>
+                        <label for="study-field" class="form-label fw-bold text animate__animated animate__lightSpeedInRight">Študijný odbor</label>
                         <input type="text" class="form-control" id="study-field" name="study-field" required />
                         <div class="invalid-feedback text">
                             Prosím vyplňte študijný odbor
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="year" class="form-label fw-bold text">Ročník</label>
+                        <label for="year" class="form-label fw-bold text animate__animated animate__lightSpeedInLeft">Ročník</label>
                         <select class="form-select" id="year" name="year" required>
                             <div class="invalid-feedback text">
                                 Prosím vyberte si ročník
                             </div>
-                            <option value="">Vyberte ročník</option>
+                            <option class="animate__animated animate__lightSpeedInLeft" value="">Vyberte ročník</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -145,7 +174,7 @@
                         </select>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-orange text">
+                        <button type="submit" class="btn btn-orange btn-lg text animate__animated animate__backInUp">
                             Zaregistrovať sa
                         </button>
                     </div>
@@ -155,10 +184,11 @@
     </div>
 
     <!-- Formulár -->
+    </main>
     <!-- Content -->
 
     <!-- Footer-->
-    <footer class="bg-dark navbar-dark py-3 mt-auto">
+    <footer class="bg-black navbar-dark py-3 mt-auto">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
@@ -188,8 +218,9 @@
     <script src="js/scrollToTop.js"></script>
     <script src="js/language.js"></script>
     <script src="js/jquery.min.js"></script>
+    <script src="js/darkmode.js"></script>
     <a onclick="topFunction()" class="" id="scrolltop" href="#" style="display: none">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
             class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
             <path
                 d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" />
