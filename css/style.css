@@ -32,8 +32,9 @@
     cursor: pointer;
 }
 
-.navbar {
-    background-color: black;
+.bg-black {
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .bg-custom {
@@ -50,5 +51,16 @@
     background-color: #e65c00;
     border-color: #e65c00;
     color: #fff;
+}
+
+/* CSS code for dark mode */
+.dark-mode {
+    background-color: black;
+    color: #ffffff;
+}
+
+body.dark-mode .navbar {
+    background-color: black;
+    color: #ffffff;
 }
 
