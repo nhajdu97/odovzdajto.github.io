@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student | OdovzdajTo</title>
+    <title>Overview | OdovzdajTo</title>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/bootstrap-icons.min.css" />
@@ -20,39 +20,61 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png" />
     <link rel="manifest" href="../favicon/site.webmanifest" />
     <!-- Favicon -->
+    <!-- Kalendar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                timeZone: 'UTC',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                editable: true,
+                dayMaxEvents: true,
+                events: 'https://fullcalendar.io/api/demo-feeds/events.json?overload-day'
+            });
+
+            calendar.render();
+        });
+
+    </script>
+    <!-- Kalendar -->
 </head>
 
 <body class="d-flex flex-column min-vh-100">
     <!-- Navigacia-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
         <div class="container">
-            <a class="navbar-brand logo animate__animated animate__fadeInTopLeft" href="home.html">OdovzdajTo</a>
+            <a class="navbar-brand logo animate__animated animate__fadeInTopLeft" href="#">OdovzdajTo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav me-auto">
+                <ul class="navbar-nav me-auto nav-font">
                     <li class="nav-item">
-                        <a class="nav-link active" href="student.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
-                        </svg>&nbsp;Home</a>
+                        <a class="nav-link" href="student.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                            </svg>&nbsp;Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="overview.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                        </svg>&nbsp;Overview</a>
+                        <a class="nav-link active" href="overview.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>&nbsp;Overview</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="assignments.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-fill"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z" />
-                        </svg>&nbsp;Assignments</a>
+                        <a class="nav-link" href="assignments.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z" />
+                            </svg>&nbsp;Assignments</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav position-static">
@@ -85,8 +107,8 @@
                     <!-- Jazyk -->
                     <!-- Rezim -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link nav-font dropdown-toggle" id="darkMode" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" href="">
+                        <a class="nav-link nav-font dropdown-toggle" id="darkMode" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" href="">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
                                 <path
@@ -95,15 +117,17 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="darkMode">
                             <li>
-                                <button class="dropdown-item" onclick="setMode('light')"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+                                <button class="dropdown-item" onclick="setMode('light')"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
                                         <path
                                             d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
                                     </svg>&nbsp;Light</button>
                             </li>
                             <li>
-                                <button class="dropdown-item" onclick="setMode('dark')"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+                                <button class="dropdown-item" onclick="setMode('dark')"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-moon-fill" viewBox="0 0 16 16">
                                         <path
                                             d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
                                     </svg>&nbsp;Dark</button>
@@ -124,11 +148,15 @@
                 <div class="col-lg-8 mx-auto text-center">
                     <h1 class="fw-bolder text-white nadpis animate__animated animate__zoomInDown"><svg
                             xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-door-open-fill" viewBox="0 0 16 16">
+                            class="bi bi-search" viewBox="0 0 16 16">
                             <path
-                                d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z" />
-                        </svg>&nbsp;Welcome John Developer</h1>
-                    <p class="lead text-white text">Welcome to the odovzdajTo system</p>
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>&nbsp;Overview</h1>
+                    <span class="lead text-white text">OdovzdajTo /</span>
+                    <span class="lead text-white text">
+                        <a href="student.html">Home</a>
+                    </span>
+                    <span class="lead text-white text">/ Overview</span>
                 </div>
             </div>
         </div>
@@ -136,72 +164,8 @@
     <!-- Section -->
     <!-- Content -->
     <div class="container my-5">
-        <div id="chronological-section" class="row justify-content-center">
-            <!-- 1 ročník -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-year="2022">
-                <div class="card border-0 text-center">
-                    <div class="card-body">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
-                            class="bi bi-folder2" viewBox="0 0 16 16">
-                            <path
-                                d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z" />
-                        </svg>
-                        <h5 class="card-title nadpis">
-                            <a href="#" data-bs-toggle="collapse" data-bs-target="#heading1-content">1st grade</a>
-                        </h5>
-                        <div id="heading1-content" class="collapse text">
-                            <p>Subject 1</p>
-                            <p>Subject 2</p>
-                            <p>Subject 3</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 1 ročník-->
-    
-            <!-- 2 ročník -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-year="2021">
-                <div class="card border-0 text-center">
-                    <div class="card-body">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
-                            class="bi bi-folder2" viewBox="0 0 16 16">
-                            <path
-                                d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z" />
-                        </svg>
-                        <h5 class="card-title nadpis">
-                            <a href="#" data-bs-toggle="collapse" data-bs-target="#heading2-content">2st grade</a>
-                        </h5>
-                        <div id="heading2-content" class="collapse text">
-                            <p>Subject 1</p>
-                            <p>Subject 2</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 2 ročník -->
-    
-            <!-- 3 ročník -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-year="2020">
-                <div class="card border-0 text-center">
-                    <div class="card-body">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
-                            class="bi bi-folder2" viewBox="0 0 16 16">
-                            <path
-                                d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z" />
-                        </svg>
-                        <h5 class="card-title nadpis">
-                            <a href="#" data-bs-toggle="collapse" data-bs-target="#heading3-content">3st grade</a>
-                        </h5>
-                        <div id="heading3-content" class="collapse text">
-                            <p>Subject 1</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 3 ročník -->
-        </div>
+        <div id="calendar"></div>
     </div>
-    
     <!-- Content -->
 
     <!-- Footer-->
@@ -235,6 +199,7 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/darkmode.js"></script>
     <script src="../js/dateTime.js"></script>
+    <script src="../js/index.global.min.js"></script>
     <a id="scrolltop" href="#" style="display: block;"></a>
 </body>
 
