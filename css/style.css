@@ -63,6 +63,16 @@ body.dark-mode .navbar {
     color: #ffffff;
 }
 
+body.dark-mode .card-body {
+    background-color: black;
+    color: #ffffff;
+}
+
+body.dark-mode .user-profile input {
+    background-color: black;
+    color: #ffffff;
+}
+
 #scrolltop {
     position: fixed;
     bottom: 15px;
@@ -76,4 +86,8 @@ body.dark-mode .navbar {
     display: block;
     z-index: 9999;
 }
+
+
+
+
 
