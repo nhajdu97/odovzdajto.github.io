@@ -1,249 +1,594 @@
 <!DOCTYPE html>
 <html lang="sk">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registrácia | OdovzdajTo</title>
+    <title id="titlePage-register">Registrácia | OdovzdajTo</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/animate.min.css">
     <!-- CSS -->
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
     <link rel="manifest" href="favicon/site.webmanifest" />
     <!-- Favicon -->
-</head>
+  </head>
 
-<body class="d-flex flex-column min-vh-100">
+  <body class="d-flex flex-column min-vh-100">
     <!-- Navigacia-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-        <div class="container">
-            <a class="navbar-brand logo animate__animated animate__fadeInTopLeft" href="index.html">OdovzdajTo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav position-static">
-                    <li class="nav-item">
-                        <a class="nav-link nav-font" href="index.html"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-house-door-fill"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
-                            </svg>&nbsp;Domov</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-font active" href="registracia.html"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-person-plus-fill" viewBox="0 0 16 16">
-                                <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                <path fill-rule="evenodd"
-                                    d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
-                            </svg>&nbsp;Registrácia</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-font" href="prihlasenie.html"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-door-open-fill"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z" />
-                            </svg>&nbsp;Prihlásenie</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link nav-font dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-translate" viewBox="0 0 16 16">
-                                <path
-                                    d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z" />
-                                <path
-                                    d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z" />
-                            </svg>&nbsp;Jazyk
-                        </a>
-                        <ul class="dropdown-menu nav-font" aria-labelledby="navbarDropdown">
-                            <li>
-                                <button class="dropdown-item" id="sk" onclick="switchLanguage('sk')"><img src="img/sk.svg" width="16" height="16"
-                                        alt="Slovak">&nbsp;SK</button>
-                            </li>
-                            <hr class="dropdown-divider">
-                            <li>
-                                <button class="dropdown-item" id="en" onclick="switchLanguage('en')"><img src="img/en.svg" width="16" height="16"
-                                        alt="English">&nbsp;EN</button>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- Rezim -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link nav-font dropdown-toggle" id="darkMode" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false" href="">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-                            </svg>
-                        </a>
-                        <ul class="dropdown-menu nav-font" aria-labelledby="darkMode">
-                            <li>
-                                <button class="dropdown-item" onclick="setMode('light')"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-                                    </svg>&nbsp;Svetlý</button>
-                            </li>
-                            <hr class="dropdown-divider">
-                            <li>
-                                <button class="dropdown-item" onclick="setMode('dark')"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-moon-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
-                                    </svg>&nbsp;Tmavý</button>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- Rezim -->
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand logo" href="index.html">OdovzdajTo</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav position-static">
+            <li class="nav-item">
+              <a class="nav-link nav-font" href="index.html"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="navbar-icon"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"
+                  /></svg
+                ><span id="navbar-home">Domov</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-font active" href="registracia.html"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="navbar-icon"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"
+                  /></svg
+                ><span id="navbar-register">Registrácia</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-font" href="prihlasenie.html"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="navbar-icon"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"
+                  /></svg
+                ><span id="navbar-login">Prihlásenie</span></a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link nav-font dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="navbar-icon"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z"
+                  />
+                  <path
+                    d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z"
+                  /></svg
+                ><span id="navbar-lang">Jazyk</span>
+              </a>
+              <ul
+                class="dropdown-menu nav-font"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <button
+                    class="dropdown-item"
+                    id="sk"
+                    onclick="switchLanguage('sk')"
+                  >
+                    <img
+                      src="img/sk.svg"
+                      width="18"
+                      height="18"
+                      alt="Slovak"
+                    />&nbsp;SK
+                  </button>
+                </li>
+                <hr class="dropdown-divider" />
+                <li>
+                  <button
+                    class="dropdown-item"
+                    id="en"
+                    onclick="switchLanguage('en')"
+                  >
+                    <img
+                      src="img/en.svg"
+                      width="18"
+                      height="18"
+                      alt="English"
+                    />&nbsp;EN
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <!-- Rezim -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link nav-font dropdown-toggle"
+                id="darkMode"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                href=""
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="navbar-icon"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                  />
+                </svg>
+              </a>
+              <ul class="dropdown-menu nav-font" aria-labelledby="darkMode">
+                <li>
+                  <button class="dropdown-item" onclick="setMode('light')">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      fill="currentColor"
+                      class="navbar-icon"
+                      viewBox="0 0 18 18"
+                    >
+                      <path
+                        d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                      /></svg
+                    ><span id="mode-light">Svetlý</span>
+                  </button>
+                </li>
+                <hr class="dropdown-divider" />
+                <li>
+                  <button class="dropdown-item" onclick="setMode('dark')">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      fill="currentColor"
+                      class="navbar-icon"
+                      viewBox="0 0 18 18"
+                    >
+                      <path
+                        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+                      /></svg
+                    ><span id="mode-dark">Tmavý</span>
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <!-- Rezim -->
+          </ul>
         </div>
+      </div>
     </nav>
     <!-- Navigacia-->
     <!-- Header -->
-    <header class="bg-custom bg-gradient text-white text-center py-5">
+    <section class="hero bg-dark bg-gradient py-5">
+      <header class="text-white text-center">
         <div class="container px-4">
-            <h1 class="fw-bolder nadpis animate__animated animate__zoomInDown">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                    class="bi bi-person-plus-fill" viewBox="0 0 16 16">
-                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                    <path fill-rule="evenodd"
-                        d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
-                </svg>&nbsp;Registrácia
-            </h1>
+          <h1 class="fw-bolder nadpis" id="registration--header--heading">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              fill="currentColor"
+              class="bi bi-person-plus-fill"
+              viewBox="0 0 18 18"
+            >
+              <path
+                d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"
+              /></svg
+            >&nbsp;<span id="header-register">Registrácia</span>
+          </h1>
         </div>
-    </header>
+      </header>
+    </section>
     <!-- Header -->
 
     <!-- Content -->
     <main>
+      <section class="p-4 m-4 main-content">
         <!-- Formulár -->
         <div class="container my-5">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form class="p-4 border rounded needs-validation" novalidate>
-                        <div class="mb-3">
-                            <label for="name"
-                                class="form-label fw-bold text animate__animated animate__lightSpeedInLeft">Meno a
-                                priezvisko</label>
-                            <input type="text" class="form-control" id="name" name="name" required />
-                            <div class="invalid-feedback text">
-                                Prosím vyplňte meno a priezvisko
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email"
-                                class="form-label fw-bold text animate__animated animate__lightSpeedInRight">Školský
-                                e-mail</label>
-                            <input type="email" class="form-control" id="email" name="email" required />
-                            <div class="invalid-feedback text">
-                                Prosím vyplňte školský email
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="heslo"
-                                class="form-label fw-bold text animate__animated animate__lightSpeedInRight">Heslo</label>
-                            <input type="password" class="form-control" id="heslo" name="heslo" required />
-                            <div class="invalid-feedback text">
-                                Prosím vyplňte heslo
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="faculty"
-                                class="form-label fw-bold text animate__animated animate__lightSpeedInLeft">Fakulta</label>
-                            <input type="text" class="form-control" id="faculty" name="faculty" required />
-                            <div class="invalid-feedback text">Prosím vyplňte fakultu</div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="study-field"
-                                class="form-label fw-bold text animate__animated animate__lightSpeedInRight">Študijný
-                                odbor</label>
-                            <input type="text" class="form-control" id="study-field" name="study-field" required />
-                            <div class="invalid-feedback text">
-                                Prosím vyplňte študijný odbor
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="year"
-                                class="form-label fw-bold text animate__animated animate__lightSpeedInLeft">Ročník</label>
-                            <select class="form-select" id="year" name="year" required>
-                                <div class="invalid-feedback text">
-                                    Prosím vyberte si ročník
-                                </div>
-                                <option class="animate__animated animate__lightSpeedInLeft" value="">Vyberte ročník
-                                </option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit"
-                                class="btn btn-orange btn-lg text animate__animated animate__backInUp">
-                                Zaregistrovať sa
-                            </button>
-                        </div>
-                    </form>
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <form
+                class="p-4 border rounded needs-validation animated-form"
+                novalidate
+              >
+                <div class="mb-3">
+                  <label for="meno_priezvisko" class="form-label fw-bold text" id="form-register-fullname"
+                    >Meno a priezvisko</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="meno_priezvisko"
+                    name="meno_priezvisko"
+                    placeholder="John Student"
+                    required
+                  />
+                  <div class="invalid-feedback text">
+                    <p id="form-field-name-invalid">
+                      Prosím vyplňte meno a priezvisko
+                    </p>
+                  </div>
                 </div>
-            </div>
-        </div>
+                <!-- Email -->
+                <div class="mb-3">
+                  <label
+                    for="email"
+                    class="form-label fw-bold text"
+                    id="form-register-email"
+                    >Školský e-mail</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    pattern="^[a-zA-Z0-9._%+-]+@student\.tuke\.sk$"
+                    placeholder="student@student.tuke.sk"
+                    required
+                  />
+                  <div class="invalid-feedback text">
+                    <p id="form-field-email-invalid">
+                      Prosím vyplňte školský email
+                    </p>
+                  </div>
+                </div>
+                <!-- Email -->
 
-        <!-- Formulár -->
+                <!-- Heslo -->
+                <div class="mb-3">
+                  <label
+                    for="heslo"
+                    class="form-label fw-bold text"
+                    id="form-register-password"
+                    >Heslo</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="heslo"
+                    name="heslo"
+                    placeholder="**********"
+                    required
+                  />
+                  <div class="invalid-feedback text">
+                    <p id="form-field-password-invalid">Prosím vyplňte heslo</p>
+                  </div>
+                </div>
+                <!-- Heslo -->
+
+                <!-- Fakulta -->
+                <div class="mb-3">
+                  <label
+                    for="fakulta"
+                    class="form-label fw-bold text"
+                    id="form-field-faculty"
+                    >Fakulta</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fakulta"
+                    name="fakulta"
+                    placeholder="FEI"
+                    required
+                  />
+                  <div class="invalid-feedback text">
+                    <p id="form-field-faculty-invalid">
+                      Prosím vyplňte fakultu
+                    </p>
+                  </div>
+                </div>
+                <!-- Fakulta -->
+
+                <!-- Studijny program -->
+                <div class="mb-3">
+                  <label
+                    for="studijny_program"
+                    class="form-label fw-bold text"
+                    id="form-register-studyprogramme"
+                    >Študijný program</label
+                  >
+                  <select
+                    class="form-select"
+                    id="studijny_program"
+                    name="studijny_program"
+                    required
+                  >
+                    <div class="invalid-feedback text">
+                      <p id="form-field-studyprogramme-invalid">Prosím vyberte si študijný program</p>
+                    </div>
+                    <option class="" value=""></option>
+                    <option
+                      value="aplikovana_elektrotechnika"
+                      id="aplikovana_elektrotechnika"
+                    >
+                      Aplikovaná elektrotechnika
+                    </option>
+                    <option
+                      value="automobilova_elektronika"
+                      id="automobilova_elektronika"
+                    >
+                      Automobilová elektronika
+                    </option>
+                    <option value="elektro_energetika" id="elektro_energetika">
+                      Elektroenergetika
+                    </option>
+                    <option
+                      value="hospodarska_informatika"
+                      id="hospodarska_informatika"
+                    >
+                      Hospodárska informatika
+                    </option>
+                    <option value="informatika" id="informatika">
+                      Informatika
+                    </option>
+                    <option
+                      value="inteligentne_systemy"
+                      id="inteligentne_systemy"
+                    >
+                      Inteligentné systémy
+                    </option>
+                    <option value="kyber_bezpecnost" id="kyber_bezpecnost">
+                      Kyberbezpečnosť
+                    </option>
+                    <option
+                      value="pocitacove_modelovanie"
+                      id="pocitacove_modelovanie"
+                    >
+                      Počítačové modelovanie
+                    </option>
+                    <option value="pocitacove_siete" id="pocitacove_siete">
+                      Počítačové siete
+                    </option>
+                    <option
+                      value="priemysel_elektrotechnika"
+                      id="priemysel_elektrotechnika"
+                    >
+                      Priemyselná elektrotechnika
+                    </option>
+                  </select>
+                </div>
+                <!-- Studijny program -->
+
+                <!-- Rocnik -->
+                <div class="mb-3">
+                  <label
+                    for="rocnik"
+                    class="form-label fw-bold text"
+                    id="form-register-year"
+                    >Ročník</label
+                  >
+                  <select
+                    class="form-select"
+                    id="rocnik"
+                    name="rocnik"
+                    required
+                  >
+                    <div class="invalid-feedback text">
+                      <p id="form-field-year-invalid">
+                        Prosím vyberte si ročník
+                      </p>
+                    </div>
+                    <option class="" value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+                <!-- Rocnik -->
+                <div class="text-center">
+                  <button
+                    type="submit"
+                    class="btn btn-dark btn-lg text mt-3"
+                    id="form-register-button"
+                  >
+                    Zaregistrovať sa
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Formulár -->
     </main>
     <!-- Content -->
 
     <!-- Footer-->
     <footer class="bg-black navbar-dark py-3 mt-auto">
-        <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
-                    <img src="img/kemt_logo.png" alt="KEMT logo" height="30" />
-                </div>
-                <div class="col-12 col-md-6 text-center text-light mb-3 mb-md-0 nav-font">
-                    &copy; 2023 Copyright&nbsp;<span class="copyright">OdovzdajTo</span>
-                </div>
-                <div class="col-12 col-md-3 text-center kontakt">
-                    <a href="mailto:johndeveloper@student.tuke.sk" class="nav-link nav-font text-light"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-person-workspace" viewBox="0 0 16 16">
-                            <path
-                                d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
-                            <path
-                                d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z" />
-                        </svg>&nbsp;Kontakt (Admin)</a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
+            <img src="img/kemt_logo.png" alt="KEMT logo" height="32" />
+          </div>
+          <div
+            class="col-12 col-md-6 text-center text-light mb-3 mb-md-0 nav-font"
+          >
+            &copy; <span id="copyright">2023</span> Copyright&nbsp;<span class="copyright">OdovzdajTo</span>
+          </div>
+          <div class="col-12 col-md-3 text-center kontakt">
+            <a
+              href="mailto:johndeveloper@student.tuke.sk"
+              class="nav-link nav-font text-light"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="navbar-icon"
+                viewBox="0 0 18 18"
+              >
+                <path
+                  d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
+                />
+                <path
+                  d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"
+                /></svg
+              ><span id="page-contact">Kontakt (Admin)</span></a
+            >
+          </div>
         </div>
+      </div>
     </footer>
     <!-- Footer-->
-
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/validation.js"></script>
     <script src="js/smooth-scroll.min.js"></script>
     <script src="js/scrollToTop.js"></script>
-    <script src="js/language.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/darkmode.js"></script>
-    <a id="scrolltop" href="#" style="display: block;"></a>
-</body>
+    <script src="js/updateCopyright.js"></script>
+    <a id="scrolltop" onclick="scrollToTop()"></a>
+    <script>
+      // Default language = Slovak
+      let currentLanguage = "sk";
 
+      // Check if the user's language preference is saved in localStorage
+      if (localStorage.getItem("userLanguage")) 
+      {
+        currentLanguage = localStorage.getItem("userLanguage");
+      }
+
+      function loadTranslations(language) 
+      {
+        fetch(`/src/js/translations/${language}.json`)
+        .then((response) => response.json())
+        .then((data) => {
+        document.getElementById("navbar-home").textContent = data.domov;
+        document.getElementById("navbar-register").textContent = data.registracia;
+        document.getElementById("navbar-login").textContent = data.prihlasenie;
+        document.getElementById("navbar-lang").textContent = data.jazyk;
+        document.getElementById("mode-light").textContent = data.svetly;
+        document.getElementById("mode-dark").textContent = data.tmavy;
+        document.getElementById("page-contact").textContent = data.kontakt;
+        document.getElementById("form-register-fullname").textContent = data.form_register_fullname;
+        document.getElementById("form-field-name-invalid").textContent = data.form_register_fullname_invalid;
+        document.getElementById("form-register-email").textContent = data.form_register_email;
+        document.getElementById("form-field-email-invalid").textContent = data.form_register_email_invalid;
+        document.getElementById("form-register-password").textContent = data.form_register_password;
+        document.getElementById("form-field-password-invalid").textContent = data.form_register_password_invalid;
+        document.getElementById("form-field-faculty").textContent = data.form_register_faculty;
+        document.getElementById("form-field-faculty-invalid").textContent = data.form_register_faculty_invalid;
+        document.getElementById("form-register-studyprogramme").textContent = data.form_register_studyprogramme;
+        document.getElementById("form-register-year").textContent = data.form_register_year;
+        document.getElementById("form-register-button").textContent = data.form_register_button;
+        // List of studies
+        document.getElementById("aplikovana_elektrotechnika").textContent = data.aplikovana_elektrotechnika;
+        document.getElementById("automobilova_elektronika").textContent = data.automobilova_elektronika;
+        document.getElementById("hospodarska_informatika").textContent = data.hospodarska_informatika;
+        document.getElementById("inteligentne_systemy").textContent = data.inteligentne_systemy;
+        document.getElementById("pocitacove_modelovanie").textContent = data.pocitacove_modelovanie;
+        document.getElementById("pocitacove_siete").textContent = data.pocitacove_siete;
+        document.getElementById("priemysel_elektrotechnika").textContent = data.priemysel_elektrotechnika;
+        document.getElementById("informatika").textContent = data.informatika;
+        document.getElementById("elektro_energetika").textContent = data.elektro_energetika;
+        document.getElementById("kyber_bezpecnost").textContent = data.kyber_bezpecnost;
+        document.getElementById("header-register").textContent = data.header_register;
+        document.getElementById("titlePage-register").textContent = data.page_title_register;
+        })
+      .catch((error) => console.error("Error loading translations:", error));
+      }
+
+      // Initialize with the default language
+      loadTranslations(currentLanguage);
+
+      // Function to switch language
+      function switchLanguage(language) 
+      {
+      currentLanguage = language;
+      loadTranslations(language);
+
+      // Save the user's language preference in localStorage
+      localStorage.setItem("userLanguage", language);
+      }
+
+      function clearUserLanguagePreference() 
+      {
+      localStorage.removeItem("userLanguage");
+      // Use the default language
+      currentLanguage = "sk";
+      loadTranslations(currentLanguage);
+      }
+    </script>
+  </body>
 </html>
