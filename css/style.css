@@ -1,93 +1,190 @@
-.nav-link {
-    transition: all 0.3s ease-in-out;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.nav-link.active {
-    font-weight: bold;
-    
+body {
+  color: #555;
+}
+
+.nav-link {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.hover {
+  font-weight: bold;
+  color: #fcb900;
 }
 
 .nav-link:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.nav-item,
+.dropdown-item {
+  font-size: 1.125rem;
+}
+
+.nav-item:link,
+.nav-item:visited {
+  font-weight: 600;
+  color: #fff;
+}
+
+.nav-item:hover,
+.nav-item:active {
+  color: #fcb900;
 }
 
 .kontakt {
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .kontakt:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 #scrolltop {
-    position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 99;
-        display: none;
-        color: #ff8300;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  display: none;
+  color: #ff8300;
 }
 
 #scrolltop:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .bg-black {
-    background-color: #000000;
-    color: #ffffff;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .bg-custom {
-    background-color: #003366;
+  background-color: #ff8300;
 }
 
-.btn-orange {
-    background-color: #ff8300;
-    color: #fff;
-    border-color: #ff8300;
+.btn-dark {
+  background-color: #343a40;
+  color: white;
 }
 
-.btn-orange:hover {
-    background-color: #e65c00;
-    border-color: #e65c00;
-    color: #fff;
+.btn-dark:hover {
+  background-color: #fcb900;
+  opacity: 0.9;
 }
 
 .dark-mode {
-    background-color: black;
-    color: #ffffff;
+  background-color: black;
+  color: #ffffff;
+}
+
+.dark-mode #lockStatus {
+  fill: #fff;
 }
 
 body.dark-mode .navbar {
-    background-color: black;
-    color: #ffffff;
+  background-color: black;
+  color: #ffffff;
 }
 
 body.dark-mode .card-body {
-    background-color: black;
-    color: #ffffff;
+  background-color: black;
+  color: #ffffff;
 }
 
 body.dark-mode .user-profile input {
-    background-color: black;
-    color: #ffffff;
+  background-color: black;
+  color: #ffffff;
 }
 
 #scrolltop {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    padding: 30px;
-    background-color: #ff8300;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAe1BMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////NgkbwAAAAKHRSTlMAAQIDDRITFBcdHh8gIyQlJjdDREx1d4CCg4WXmpu5urzZ6e3v+fv9pStiuwAAAI9JREFUOE/dylkWgkAMRNFqUXEW53kC1Ox/hWKOtG3SZgHkq3LuAxp4q7xv+oboPrDdLNiNYktkFt7/FIFHix+viqHwHYkThffr7Bkrvp4gixT7wIHsURcj6ZeE/6kopMtirTwsUuCmHZjUxRxIS17n0H1xctXultqB8bs4Ot6dQjsXB/fZ7WVLOdBbODTmXgKJJx7c/fm3AAAAAElFTkSuQmCC);
-    background-repeat: no-repeat;
-    background-position: center center;
-    border-radius: 5px;
-    display: block;
-    z-index: 9999;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  padding: 30px;
+  background-color: #fcb900;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAe1BMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////NgkbwAAAAKHRSTlMAAQIDDRITFBcdHh8gIyQlJjdDREx1d4CCg4WXmpu5urzZ6e3v+fv9pStiuwAAAI9JREFUOE/dylkWgkAMRNFqUXEW53kC1Ox/hWKOtG3SZgHkq3LuAxp4q7xv+oboPrDdLNiNYktkFt7/FIFHix+viqHwHYkThffr7Bkrvp4gixT7wIHsURcj6ZeE/6kopMtirTwsUuCmHZjUxRxIS17n0H1xctXultqB8bs4Ot6dQjsXB/fZ7WVLOdBbODTmXgKJJx7c/fm3AAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 5px;
+  display: block;
+  z-index: 9999;
+}
+
+.btn {
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.card {
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.navbar-brand {
+  font-size: 1.563rem;
+}
+
+h1.nadpis {
+  font-size: 2.188rem;
 }
 
 
+#en,
+#sk,
+#svetly,
+#tmavy {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
 
+/* Basic styles for the form and form elements */
+.animated-form {
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
 
+.animated-form label,
+.animated-form input {
+  display: block;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease-in-out;
+}
 
+/* Animation when the form is focused or hovered */
+.animated-form:focus-within,
+.animated-form:hover {
+  transform: scale(1.05);
+}
+
+/* Animation for form labels and inputs */
+.animated-form label:focus-within,
+.animated-form label:hover {
+  transform: translateX(5px);
+}
+
+.animated-form input:focus,
+.animated-form input:hover {
+  transform: scale(1.02);
+}
+
+.breadcrumb {
+  text-decoration: none;
+  color: inherit;
+}
