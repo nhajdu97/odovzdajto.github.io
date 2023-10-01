@@ -1,14 +1,18 @@
-window.onscroll = function() {
-	var e = document.getElementById("scrolltop");
-    if (!e) {
-    	e = document.createElement("a");
-        e.id = "scrolltop";
-        e.href = "#";
-        document.body.appendChild(e);
-	}
-	e.style.display = document.documentElement.scrollTop > 300 ? "block" : "none";
-    e.onclick = (ev) => {
-    	ev.preventDefault();
-        document.documentElement.scrollTop = 0;
-    };
+// Function to scroll to the top of the page
+function scrollToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+}
+
+// Show/hide the scroll-to-top button based on scroll position
+window.onscroll = function () {
+  var scrollToTopButton = document.getElementById("scrolltop");
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    scrollToTopButton.style.display = "block";
+  } else {
+    scrollToTopButton.style.display = "none";
+  }
 };
