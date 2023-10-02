@@ -531,7 +531,7 @@
 
       function loadTranslations(language) 
       {
-        fetch(`/src/js/translations/${language}.json`)
+        fetch(`js/translations/${language}.json`)
         .then((response) => response.json())
         .then((data) => {
         document.getElementById("navbar-home").textContent = data.domov;
